@@ -1,0 +1,42 @@
+{
+  "name": "kitten",
+  "plural": "kittens",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "kittenId": {
+      "type": "string",
+      "id": true
+    },
+    "kittenName": {
+      "type": "string",
+      "required": true
+    },
+    "kittenColor": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "kittenGroomers": {
+      "type": "hasAndBelongsToMany",
+      "model": "groomer",
+      "foreignKey": "groomerId"
+    },
+    "kittenBirthplace": {
+      "type": "hasOne",
+      "model": "birthplace",
+      "foreignKey": "birthPlaceId"
+    },
+    "kittenTags": {
+      "type": "hasMany",
+      "model": "tag",
+      "foreignKey": "tagId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

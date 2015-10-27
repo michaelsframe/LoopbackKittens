@@ -1,0 +1,32 @@
+{
+  "name": "groomer",
+  "plural": "groomers",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "groomerId": {
+      "type": "string",
+      "id": true
+    },
+    "groomerName": {
+      "type": "string",
+      "required": true
+    },
+    "groomerYrsExperience": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "groomerKittens": {
+      "type": "hasAndBelongsToMany",
+      "model": "kitten",
+      "foreignKey": "kittenId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
