@@ -39,5 +39,13 @@
   "groomer": {
     "dataSource": "db",
     "public": true
+  },
+  "tag": {
+    "dataSource": "db",
+    "public": true
+  },
+  "birthplace": {
+    "dataSource": "db",
+    "public": true
   }
 }

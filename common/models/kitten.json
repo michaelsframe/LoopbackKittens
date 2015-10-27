@@ -20,6 +20,14 @@
     "kittenGroomers": {
       "type": "hasAndBelongsToMany",
       "model": "groomer"
+    },
+    "kittenTags": {
+      "type": "hasMany",
+      "model": "tag"
+    },
+    "kittenBirthplace": {
+      "type": "hasOne",
+      "model": "birthplace"
     }
   },
   "acls": [],

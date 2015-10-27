@@ -1,0 +1,27 @@
+{
+  "name": "tag",
+  "plural": "tags",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "tagType": {
+      "type": "string",
+      "required": true
+    },
+    "tagExpiration": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tagKitten": {
+      "type": "belongsTo",
+      "model": "kitten"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
