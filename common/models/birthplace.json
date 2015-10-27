@@ -16,7 +16,8 @@
   "relations": {
     "birthplaceKittens": {
       "type": "hasMany",
-      "model": "kitten"
+      "model": "kitten",
+      "foreignKey": "bpId"
     }
   },
   "acls": [],

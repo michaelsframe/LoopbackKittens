@@ -26,8 +26,9 @@
       "model": "tag"
     },
     "kittenBirthplace": {
-      "type": "hasOne",
-      "model": "birthplace"
+      "type": "belongsTo",
+      "model": "birthplace",
+      "foreignKey": "bpId"
     }
   },
   "acls": [],
